@@ -2,17 +2,17 @@
 
 ## Description
 
-Zoom Tab Killer is a Chrome Extension designed to solve the problem of residual tabs left behind after joining Zoom meetings through links. It automatically closes these tabs once the meeting has ended, ensuring a clutter-free browsing experience.
+Zoom Tab Killer is a Chrome Extension designed to automatically close the launched window from Zoom meetings. It ensures a clutter-free browsing experience by closing the tabs associated with Zoom meetings.
 
 ## Features
 
-- Automatically closes tabs opened by Zoom meetings.
+- Automatically closes the tabs opened by Zoom meetings.
 - Compatible with various Zoom meeting URLs, including standard Zoom domains and custom subdomains.
 - Simple setup and operation.
 
 ## How it Works
 
-The extension listens for completed web navigation events on Zoom-related URLs. When a navigation event matches certain criteria, such as meeting success status or specific subdomains, the extension automatically closes the associated tab. This process helps keep your browser organized and free of unnecessary tabs.
+The extension utilizes a service worker and content script to detect completed web navigation events on Zoom-related URLs. When a navigation event matches certain criteria, such as meeting success status or specific subdomains, the extension automatically closes the associated tab. This process helps keep your browser organized and free of unnecessary tabs.
 
 ## Installation
 
@@ -25,12 +25,6 @@ The extension listens for completed web navigation events on Zoom-related URLs. 
 ## Usage
 
 Simply join a Zoom meeting using a link, and the extension will take care of closing the associated tab once the meeting ends. No additional setup or interaction is required.
-
-## Permissions
-
-- `webNavigation`: Allows the extension to listen for navigation events and take action accordingly.
-- `tabs`: Enables the extension to manipulate browser tabs, including closing tabs as needed.
-- `host_permissions`: Grants access to specific domains, ensuring compatibility with Zoom-related URLs.
 
 ## Support
 
